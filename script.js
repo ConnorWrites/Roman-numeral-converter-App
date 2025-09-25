@@ -1,6 +1,7 @@
 const input = document.getElementById("number");
 const button = document.getElementById("convert-btn");
 const output = document.getElementById("output");
+const clear = document.getElementById("clear-btn");
 
 const romans = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
 const numerals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
@@ -35,3 +36,5 @@ if (e.key === "Enter") {
 convertToRoman();
 }
 });
+
+clear.addEventListener("click", () => { output.innerText = ""; input.value = ""; });
